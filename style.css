@@ -1,4 +1,36 @@
-roublehtml {
-  height: 100%;
-  width: 100%;
+body{
+background-color: #36c7f7;
+}
+h1{
+  color:red
+}
+p{
+  font-family: Arial;
+  font-size: 15px;
+  color:green;
+}
+div.borddifer{
+  top: 30px;
+  left: 10px;
+  width: 800px;
+  height: 350px;
+  text-align: left;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  }
+label{
+  color: #0011ff;
+  width: 6em;
+  font-size: 20px;
+  text-align: right;
+  font-weight: bold;
+}
+input{
+  width: 10em;
+  background-color: #d7adad;
+ /* float:right;*/
+  margin-bottom: 20px;
+  margin-left: 20px;
 }

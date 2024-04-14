@@ -1,16 +1,38 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <title> mandlibs</title>
-  <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-firestore-compat.js"></script>
-
-</head>
-
-<body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>madlibs</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-firestore-compat.js"></script>
+  </head>
+  <body>
+  <h1>Madlibs Juan</h1>
+    <div class="borddifer">
+      <fieldset>
+      <legend>Play with me :</legend>
+      <label for="noun1">* Name of an old building:</label>
+      <input type="text" id="noun1"><br>
+      <label for="noun2">* Place where you take a bath outside:</label>
+      <input type="text" id="noun2"><br>
+      <label for="adjective">* How do you feel when you have a lot of money? :</label>
+      <input type="text" id="adjective"><br>
+      <label for="noun3">* Group of people live together in the same house :</label>
+      <input type="text" id="noun3"><br>
+      <label for="verb"> * Action  to take off dust:</label>
+      <input type="text" id="verb"><br>
+      <label for="noun4">* Something is done:</label>
+      <input type="text" id="noun4"><br>
+      <label for="noun5">* Tell me your age:</label>
+      <input type="text" id="noun5"><br>
+    </fieldset>
+    <p id="story"> Once upon in a time I was in a dream. My dream started in a huge <strong>"noun1"</strong>. <br>The <strong>"noun1"</strong>had a big <strong>"noun2"</strong> , and a lot of rooms. I felt like a <strong>"adjective"</strong>" man, and my <strong>"noun3"</strong> + " was very happy.<br> The problem started when we had to <strong>"verb"</strong> all rooms. None in my <strong>"noun3"</strong> didn't want <strong>"verb"</strong> these huge rooms and bathrooms!!!.<br> The <strong>"noun5"</strong>" of this story is when you say how old you are.<br>Tell me your age and I will tell you something "</p>
+    <button onclick="myFunction()"> Clik after fill out the box"></button>  
+      
   <!-- JS for Firebase -->
-  <script type="module">
+    <script type="module">
     // setup firebase app and firestore database
     import {getFirestore} from "https://www.gstatic.com/firebasejs/10.10.0/firebase-firestore.js";
     const firebaseConfig = {
@@ -25,9 +47,8 @@
     const app = firebase.initializeApp(firebaseConfig);
     var db = getFirestore(app);
     console.log("firebase setup complete!");
-  </script>
-  <script src="script.js"></script>
-
+    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
