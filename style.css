@@ -34,3 +34,39 @@ input{
   margin-bottom: 20px;
   margin-left: 20px;
 }
+button {
+  top:400px;
+  left:80px;
+  width: 15em;
+  border: 2px solid #ff000d;
+  border-radius: 10px 15px 20px 5px;
+  padding-top: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-bottom:5px;
+  font-size: 15px;
+  font-family:"Arial";
+  font-weight: bold;
+  text-align: left;
+  box-shadow: 10px 10px 10px 10px;
+  background-color: #fba35b;
+  color: #1613e7;
+}
+.reset1 {
+  top:400px;
+  left:150px;
+  width: 15em;
+  border: 2px solid #ff000d;
+  border-radius: 10px 15px 20px 5px;
+  padding-top: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-bottom:5px;
+  font-size: 15px;
+  font-family:"Arial";
+  font-weight: bold;
+  text-align: left;
+  box-shadow: 10px 10px 10px 10px;
+  background-color: #fba35b;
+  color: #1613e7;
+}
