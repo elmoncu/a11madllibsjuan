@@ -28,10 +28,9 @@
         <label for="noun5">* Tell me your age:</label>
         <input type="text" id="noun5"><br>
       </fieldset>
-    <div id="getStory">
     <button type="submit" onclick="getStory()">Clik after fill out all boxes</button>
-       <div id="getNoun5"></div>
     </div>
+    <script src="script.js"></script>
   <!-- JS for Firebase -->
     <script type="module">
     // setup firebase app and firestore database
@@ -49,6 +48,6 @@
     var db = getFirestore(app);
     console.log("firebase setup complete!");
     </script>
-    <script src="script.js"></script>
+    
 </body>
 </html>
