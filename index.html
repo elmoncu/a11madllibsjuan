@@ -1,53 +1,46 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>madlibs</title>
-    <link href="style.css" rel="stylesheet" type="text/css">
-    <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-firestore-compat.js"></script>
-  </head>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>madlibs</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-firestore-compat.js"></script>
+</head>
+
 <body>
   <h1>Madlibs Juan</h1>
-    <div class="borddifer">
-      <fieldset>
-        <legend>Play with me :</legend>
-        <label for="noun1">* Name of an old building:</label>
-        <input type="text" id="noun1"><br>
-        <label for="noun2">* Place where you take a bath outside:</label>
-        <input type="text" id="noun2"><br>
-        <label for="adjective">* How do you feel when you have a lot of money? :</label>
-        <input type="text" id="adjective"><br>
-        <label for="noun3">* Group of people live together in the same house :</label>
-        <input type="text" id="noun3"><br>
-        <label for="verb"> * Action  to take off dust:</label>
-        <input type="text" id="verb"><br>
-        <label for="noun4">* Something is done:</label>
-        <input type="text" id="noun4"><br>
-        <label for="noun5">* Tell me your age:</label>
-        <input type="text" id="noun5"><br>
-      </fieldset>
+  <div class="borddifer">
+    <fieldset>
+      <legend>Play with me :</legend>
+      <label for="noun1">* Name of an old building:</label>
+      <input type="text" id="noun1"><br>
+      <label for="noun2">* Place where you take a bath outside:</label>
+      <input type="text" id="noun2"><br>
+      <label for="adjective">* How do you feel when you have a lot of money? :</label>
+      <input type="text" id="adjective"><br>
+      <label for="noun3">* Group of people live together in the same house :</label>
+      <input type="text" id="noun3"><br>
+      <label for="verb"> * Action to take off dust:</label>
+      <input type="text" id="verb"><br>
+      <label for="noun4">* Something is done:</label>
+      <input type="text" id="noun4"><br>
+      <label for="noun5">* Tell me your age:</label>
+      <input type="text" id="noun5"><br>
+      <label for="noun6">* Name of story:</label>
+      <input type="text" id="noun6"><br>
+      <p id="output"></p>
+    </fieldset>
     <button type="submit" onclick="getStory()">Clik after fill out all boxes</button>
-    </div>
-    <script src="script.js"></script>
-  <!-- JS for Firebase -->
-    <script type="module">
-    // setup firebase app and firestore database
-    import {getFirestore} from "https://www.gstatic.com/firebasejs/10.10.0/firebase-firestore.js";
-    const firebaseConfig = {
-      apiKey: "AIzaSyDznKF5z6yqfExm24se0msIYYmuXGZIjgg",
-      authDomain: "madlibsjuan.firebaseapp.com",
-      projectId: "madlibsjuan",
-      storageBucket: "madlibsjuan.appspot.com",
-      messagingSenderId: "802590992860",
-      appId: "1:802590992860:web:9d5e5f423e15fbce95c719",
-      measurementId: "G-SN5L7T2G0T"
-    };
-    const app = firebase.initializeApp(firebaseConfig);
-    var db = getFirestore(app);
-    console.log("firebase setup complete!");
-    </script>
-    
+    <button id="createStory" onclick="createMadLib()">CREATE a Madlib story</button>
+    <button id="saveButton " onclick="saveMadLib()">SAVE Madlib story</button>
+    <button id="retrieveButton " onclick="retrieveMadLib()">RETRIEVE Madlib story</button>
+    <button id="editButton " onclick="editMadLib()">EDIT Madlib story</button>
+    <button id="deleteButton " onclick="deleteMadLib()">DELETE Madlib story</button>
+  </div>
+  <script src="script.js"></script>
 </body>
+
 </html>
