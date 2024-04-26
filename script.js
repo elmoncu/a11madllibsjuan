@@ -29,18 +29,18 @@ function getStory() {
   document.getElementById("output").innerHTML = story;
   console.log("story" + story);
   // Line 11 & 12 are saving the completed story element as a string data in the database 
-  // From line 15 to 25 we are going to save the story in the database.
+  // From line ... we are going to save the story in the database.
   var storyData = {
     timestamp: Date.now(),
+    noun1: castle,
+    noun2: pool,
+    adjective: rich,
+    noun3: family,
+    verb: clean,
+    noun4: theend,
+    noun5: myage,
+    noun6: storyname,
     story: story,
-    castle: castle,
-    pool: pool,
-    adjective: adjective,
-    family: family,
-    verb: verb,
-    theend: theend,
-    myage: myage,
-    storyname: storyname,
   }
   return storyData;
 }
