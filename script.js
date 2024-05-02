@@ -73,14 +73,14 @@ function retrieveMadLib() {
         console.log("Document data:", doc.data());
         var storyData = doc.data();
         console.log("storyName: " + storyData.storyName);
-        document.getElementById("noun1").innerHTML = storyData.noun1;
-        document.getElementById("noun2").innerHTML = storyData.noun2;
-        document.getElementById("adjective").innerHTML = storyData.adjective;
-        document.getElementById("noun3").innerHTML = storyData.noun3;
-        document.getElementById("verb").innerHTML = storyData.verb;
-        document.getElementById("noun4").innerHTML = storyData.noun4;
-        document.getElementById("noun5").innerHTML = storyData.noun5;
-        document.getElementById("noun6").innerHTML = storyData.storyName;
+        document.getElementById("noun1").value = storyData.noun1;
+        document.getElementById("noun2").value = storyData.noun2;
+        document.getElementById("adjective").value = storyData.adjective;
+        document.getElementById("noun3").value = storyData.noun3;
+        document.getElementById("verb").value = storyData.verb;
+        document.getElementById("noun4").value = storyData.noun4;
+        document.getElementById("noun5").value = storyData.noun5;
+        document.getElementById("noun6").value = storyData.storyName;
       } else {
         //doc.data()will be undefined in this case
         console.log("No such document!");
