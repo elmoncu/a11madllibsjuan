@@ -65,11 +65,10 @@ function saveMadLib() {
 
 function retrieveMadLib() {
   //first, ask the used the type the storyname they want to retrieve
-  var storyData = prompt("Enter story name to retrieve:"); db.collection("madlibsjuan")
-    .doc(storyData)
+  var storyName = prompt("Enter story name to retrieve:"); db.collection("madlibsjuan")
+    .doc(storyName)
     .get()
     .then((doc) => {
-      // if the story exists in the database, show it on the website. Else , say "Story not found"
       if (doc.exists) {
         console.log("Document data:", doc.data());
         var storyData = doc.data();
@@ -85,7 +84,7 @@ function retrieveMadLib() {
       } else {
         //doc.data()will be undefined in this case
         console.log("No such document!");
-        document.getElementById("noun6").innerHTML = "Story not found";
+        document.getElementById("noun6").value = "Story not found";
       }
       //this method retrieves an existing madilib from the database
       console.log("retrieveMadlib()" + storyName);
