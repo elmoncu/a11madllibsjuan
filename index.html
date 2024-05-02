@@ -28,13 +28,14 @@
       <label for="noun4">* Something is done:</label>
       <input type="text" id="noun4"><br>
       <label for="noun5">* Tell me your age:</label>
-      <input type="text" id="noun5"><br>
+      <input type="text" id="noun5" oninput="getNoun5()"><br>
       <label for="noun6">* Name of story:</label>
       <input type="text" id="noun6"><br>
       <p id="output"></p>
     </fieldset>
     <button type="submit" onclick="getStory()">Clik after fill out all boxes</button>
-    <button id="createStory" onclick="createMadLib()">CREATE a Madlib story</button>
+    <!--<button id="createStory" onclick="createMadLibstory()">CREATE a Madlib story</button>
+    -->
     <button id="saveButton" onclick="saveMadLib()">SAVE Madlib story</button>
     <button id="retrieveButton" onclick="retrieveMadLib()">RETRIEVE Madlib story</button>
     <button id="editButton" onclick="editMadLib()">EDIT Madlib story</button>
