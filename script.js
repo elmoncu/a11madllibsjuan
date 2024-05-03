@@ -106,14 +106,14 @@ function editMadLib() {
         console.log("Document data:", doc.data());
         var storyData = doc.data();
         //if story is found, display all the previous inputs for the story , else, display " Story not found"
-        document.getElementById("noun1").value = storyData.castle;
-        document.getElementById("noun2").value = storyData.pool;
-        document.getElementById("adjective").value = storyData.rich;
-        document.getElementById("noun3").value = storyData.family;
-        document.getElementById("verb").value = storyData.clean;
-        document.getElementById("noun4").value = storyData.theend;
-        document.getElementById("noun5").value = storyData.myage;
-        document.getElementById("noun6").value = storyData.storyname;
+        document.getElementById("noun1").innerHTML = storyData.castle;
+        document.getElementById("noun2").innerHTML = storyData.pool;
+        document.getElementById("adjective").innerHTML = storyData.rich;
+        document.getElementById("noun3").innerHTML = storyData.family;
+        document.getElementById("verb").innerHTML= storyData.clean;
+        document.getElementById("noun4").innerHTML = storyData.theend;
+        document.getElementById("noun5").innerHTML = storyData.myage;
+        document.getElementById("noun6").innerHTML = storyData.storyname;
       } else {
         //doc.data() will be undefined in this case
         console.log("No such document!");
@@ -130,8 +130,9 @@ function deleteMadLib() {
   // this method deletes an existing madilib from the database and delete it.
   console.log("deleteMadlib() called");
   //first  ask the user to type the story name they want to delete.\
-  var storyData = prompt("Enter story name to delete:");db.collection("madlibsjuan")
-    .doc(storyData)
+  var storyName= prompt("Enter story name to delete:");
+  db.collection("madlibsjuan")
+    .doc(storyName)
     .get()
     .then((doc) => {
       // if the story exists in the database, delete it. Else, display "Story not found"
@@ -140,7 +141,7 @@ function deleteMadLib() {
         var storyData = doc.data();
         document.getElementById("noun6").innerHTML =
           storyData.storyName + " deleted from database!";
-        db.collection("madlibs").doc(storyName).delete();
+        db.collection("madlibsjuan").doc(storyName).delete();
       } else {
         // doc.data() will be undefined in this case
         console.log("No such document!");
